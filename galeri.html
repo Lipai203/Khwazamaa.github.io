@@ -40,21 +40,27 @@
         </section>
         
         <section class="gallery-grid">
-            
-            
+
+            <div class="photo-modal" id="photoModal" aria-hidden="true">
+                <button class="photo-modal-close" id="photoModalClose" aria-label="Tutup">&times;</button>
+                <img class="photo-modal-img" id="photoModalImg" src="" alt="Foto Popup">
+                <div class="photo-modal-caption" id="photoModalCaption"></div>
+            </div>
 
             <!-- Photo 1 -->
-            <div class="gallery-item" data-category="uts" data-title="Ustad Ustad" data-caption="Calon calon Penghuni surga" data-img="WhatsApp Image 2026-02-15 at 19.54.42.jpeg">
+
+
+            <div class="gallery-item" data-category="uts" data-title="Ustad Ustad" data-caption="pweh calon Penghuni surga" data-img="WhatsApp Image 2026-02-15 at 19.54.42.jpeg">
                 <img src="WhatsApp Image 2026-02-15 at 19.54.42.jpeg" alt="Ustad Ustad">
                 <div class="gallery-caption">
                     <h4>Ustad Ustad</h4>
-                    <p>Calon calon Penghuni surga</p>
+                    <p>pweh calon Penghuni surga</p>
                 </div>
             </div>
 
 
             <!-- Photo 1 -->
-            <div class="gallery-item" data-category="uts" data-title="Ustad Ustad" data-caption="Calon calon Penghuni surga" data-img="WhatsApp Image 2026-02-15 at 19.54.42.jpeg">
+            <div class="gallery-item" data-category="uts" data-title="Ukhty ukhty" data-caption="Calon calon Penghuni surga" data-img="WhatsApp Image 2026-02-15 at 19.54.43 (1).jpeg">
 
                 <img src="WhatsApp Image 2026-02-15 at 19.54.43 (1).jpeg" alt="Ukhty ukhty">
                 <div class="gallery-caption">
@@ -217,27 +223,74 @@
     <script>
         // Jadikan kartu foto bisa dibuka ke halaman detail
         (function attachGalleryLinks() {
+            
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('photoModalImg');
+            const modalCaption = document.getElementById('photoModalCaption');
+            const modalClose = document.getElementById('photoModalClose');
+
+            function openPhotoModal({ img, caption, title }) {
+                modalImg.src = img || '';
+                modalCaption.textContent = caption || title || '';
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+
+            function closePhotoModal() {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                modalImg.src = modalImg.src;
+            }
+
+
+            if (modalClose) modalClose.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); closePhotoModal(); });
+            if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closePhotoModal(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePhotoModal(); });
+
             const items = document.querySelectorAll('.gallery-item');
+
             items.forEach(item => {
                 const title = item.dataset.title || item.querySelector('.gallery-caption h4')?.textContent?.trim() || '';
                 const category = item.dataset.category || '';
                 const caption = item.dataset.caption || item.querySelector('.gallery-caption p')?.textContent?.trim() || '';
                 const img = item.dataset.img || item.querySelector('img')?.getAttribute('src') || '';
 
+                const type = item.dataset.type || 'foto';
+                const video = item.dataset.video || '';
+
                 const url = new URL('galeri_item.html', window.location.href);
+
                 if (title) url.searchParams.set('title', title);
                 if (category) url.searchParams.set('category', category);
                 if (img) url.searchParams.set('img', img);
                 if (caption) url.searchParams.set('caption', caption);
-
-                const a = document.createElement('a');
-                a.className = 'gallery-card-link';
-                a.href = url.toString();
-                a.setAttribute('aria-label', title ? `Detail foto ${title}` : 'Detail foto');
+                if (type) url.searchParams.set('type', type);
+                if (video) url.searchParams.set('video', video);
 
                 item.style.position = item.style.position || 'relative';
                 item.style.cursor = 'pointer';
+
+                // Untuk foto: tampilkan modal popup di galeri.html
+                if (type !== 'video') {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openPhotoModal({ img, caption, title });
+                    });
+                    return;
+                }
+
+                // Untuk video: tetap arahkan ke halaman detail
+                const a = document.createElement('a');
+                a.className = 'gallery-card-link';
+                a.href = url.toString();
+                a.setAttribute('aria-label', title ? `Detail video ${title}` : 'Detail video');
                 item.appendChild(a);
+
+
             });
         })();
 

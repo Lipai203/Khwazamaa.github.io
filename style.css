@@ -17,10 +17,12 @@ body {
     background-color: #f5f7fa;
 }
 
-/* background dasar putih di halaman siswa (cocok dengan header/footer) */
+/* background dasar kembali semula */
 body.siswa-page {
-    background-color: #ffffff;
+    background-color: #f5f7fa;
 }
+
+
 
 
 /* Container */
@@ -551,6 +553,60 @@ body.siswa-page,
     margin-left: 5px;
 }
 
+/* Photo Modal Styles (untuk foto di galeri.html) */
+.photo-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo-modal.active {
+    display: flex;
+}
+
+.photo-modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    background: #000;
+    border-radius: 10px;
+}
+
+.photo-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    line-height: 1;
+    z-index: 1001;
+}
+
+.photo-modal-caption {
+    margin-top: 12px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.photo-modal > div,
+.photo-modal > img {
+    display: block;
+}
+
+.photo-modal {
+    flex-direction: column;
+}
+
 /* Video Modal Styles */
 .video-modal {
     display: none;
@@ -568,6 +624,7 @@ body.siswa-page,
 .video-modal.active {
     display: flex;
 }
+
 
 .video-modal-content {
     position: relative;

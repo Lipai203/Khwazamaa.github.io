@@ -35,6 +35,8 @@
             <div class="gallery-detail-card">
                 <div class="gallery-detail-photo">
                     <img id="fotoDetail" src="" alt="Foto Detail">
+                    <video id="videoDetail" controls playsinline class="video-detail" style="display:none; width:100%; max-height:60vh; object-fit:contain; background:#000;"></video>
+
                 </div>
 
                 <div class="gallery-detail-info">
@@ -57,18 +59,49 @@
 
             const judul = params.get('title') || 'Detail Foto';
             const kategori = params.get('category') || '';
+            const type = params.get('type') || 'foto';
             const img = params.get('img') || '';
+            const video = params.get('video') || '';
             const caption = params.get('caption') || '';
             const teks = params.get('text') || '';
+
 
             document.getElementById('judulFoto').textContent = judul;
             document.getElementById('kategoriFoto').textContent = kategori ? kategori : '\u00A0';
 
             const foto = document.getElementById('fotoDetail');
-            if (img) foto.src = img;
+            const videoEl = document.getElementById('videoDetail');
+
+            const isVideo = type === 'video' || (video && video.trim().length > 0);
+
+            if (isVideo) {
+                // tampilkan video
+                if (img) {
+                    // jika ada poster (reuse img)
+                    try {
+                        videoEl.poster = img;
+                    } catch (_) {}
+                }
+                if (video) {
+                    videoEl.src = video;
+                }
+                videoEl.style.display = 'block';
+                foto.style.display = 'none';
+
+                // beberapa browser perlu load ulang setelah set src
+                try { videoEl.load(); } catch (_) {}
+            } else {
+                // tampilkan foto seperti biasa
+                if (img) {
+                    foto.src = img;
+                }
+                foto.style.display = 'block';
+                videoEl.style.display = 'none';
+            }
 
             document.getElementById('captionFoto').textContent = caption ? caption : judul;
             document.getElementById('textFoto').textContent = teks ? teks : '';
+
         })();
     </script>
 </body>
