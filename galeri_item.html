@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto - Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KHWAZAMA</h1>
+            <p>Website Alumni SICH Tahun Pelajaran 2023-2026</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Alumni</a></li>
+                <li><a href="galeri.html" class="active">Galeri Foto</a></li>
+                <li><a href="lokasi.html">Lokasi Sekolah</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-title">
+            <h2 id="judulFoto">Detail Foto</h2>
+            <p id="kategoriFoto">&nbsp;</p>
+        </section>
+
+        <section class="gallery-detail">
+            <div class="gallery-detail-card">
+                <div class="gallery-detail-photo">
+                    <img id="fotoDetail" src="" alt="Foto Detail">
+                </div>
+
+                <div class="gallery-detail-info">
+                    <h3 id="captionFoto">Caption</h3>
+                    <p id="textFoto">&nbsp;</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kwanzama - Alumni SICH. Dibuat dengan 💙 untuk semuanya.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+
+            const judul = params.get('title') || 'Detail Foto';
+            const kategori = params.get('category') || '';
+            const img = params.get('img') || '';
+            const caption = params.get('caption') || '';
+            const teks = params.get('text') || '';
+
+            document.getElementById('judulFoto').textContent = judul;
+            document.getElementById('kategoriFoto').textContent = kategori ? kategori : '\u00A0';
+
+            const foto = document.getElementById('fotoDetail');
+            if (img) foto.src = img;
+
+            document.getElementById('captionFoto').textContent = caption ? caption : judul;
+            document.getElementById('textFoto').textContent = teks ? teks : '';
+        })();
+    </script>
+</body>
+</html>
+

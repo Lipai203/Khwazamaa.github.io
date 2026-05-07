@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Siswa - Khwazama SICH 2023-2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="siswa-page">
+    <header>
+
+        <div class="container">
+            <h1>KHWAZAMA</h1>
+            <p>Website Alumni SICH Tahun Pelajaran 2023-2026</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil Alumni</a></li>
+                <li><a href="galeri.html">Galeri Foto</a></li>
+                <li><a href="lokasi.html">Lokasi Sekolah</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-title">
+            <h2 id="namaSiswa">Profil Siswa</h2>
+            <p id="kelasSiswa">&nbsp;</p>
+        </section>
+
+        <section class="siswa-profile">
+            <div class="siswa-card">
+                <div class="siswa-photo">
+                    <img id="fotoSiswa" src="" alt="Foto Siswa">
+                </div>
+
+                <div class="siswa-info">
+                    <h3>Prestasi</h3>
+                    <div id="prestasiSiswa" class="prestasi">
+                        <!-- diisi dari query param -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kwanzama - Alumni SICH. Dibuat dengan 💙 untuk semuanya.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+
+            const nama = params.get('name') || 'Profil Siswa';
+            const kelas = params.get('kelas') || '';
+            const img = params.get('img') || '';
+            const prestasiRaw = params.get('prestasi') || '';
+
+            document.getElementById('namaSiswa').textContent = nama;
+            document.getElementById('kelasSiswa').textContent = kelas ? kelas : '\u00A0';
+
+            const foto = document.getElementById('fotoSiswa');
+            if (img) {
+                foto.src = img;
+            }
+
+            // prestasi di query string: dipisahkan dengan | atau ";" dan dikirim dari profil.html
+            const container = document.getElementById('prestasiSiswa');
+            if (!prestasiRaw) {
+                container.innerHTML = '<ul><li>Belum ada data prestasi</li></ul>';
+                return;
+            }
+
+            const items = prestasiRaw
+                .split('|')
+                .map(s => s.trim())
+                .filter(Boolean);
+
+            const ul = document.createElement('ul');
+            items.forEach(it => {
+                const li = document.createElement('li');
+                li.textContent = it;
+                ul.appendChild(li);
+            });
+
+            container.innerHTML = '';
+            container.appendChild(ul);
+        })();
+    </script>
+</body>
+</html>
+

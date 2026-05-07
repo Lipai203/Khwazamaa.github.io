@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Alumni - Khwazama SICH 2023-2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KHWAZAMA</h1>
+            <p>Website Alumni SICH Tahun Pelajaran 2023-2026</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html" class="active">Profil Alumni</a></li>
+                <li><a href="galeri.html">Galeri Foto</a></li>
+                <li><a href="lokasi.html">Lokasi Sekolah</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section class="page-title">
+            <h2>Profil Alumni SICH 2023-2026</h2>
+            <p>Daftar lengkap alumni beserta prestasinya</p>
+        </section>
+        
+        <section class="alumni-filter">
+            <label for="kelas">Filter berdasarkan kelas:</label>
+            <select id="kelas" onchange="filterAlumni()">
+                <option value="all">Semua Kelas</option>
+                <option value="IX AVICENNA">IX AVICENNA</option>
+                <option value="IX AVERUSY">IX AVERUSY</option>
+            </select>
+        </section>
+        
+        <section class="alumni-grid">
+            <!-- Alumni Card 1 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Navilla Shafira</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 OSN Matematika Tingkat Provinsi</li>
+                            <li>Juara 2 Lomba Sains Nasional</li>
+                            <li>Best Student Award 2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 2 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Anaira Shakila</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Bahasa Inggris Nasional</li>
+                            <li>Juara 2 Debat Bahasa Inggris</li>
+                            <li>Best Speaker Award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 3 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=BP" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Alifta Faza Azahro</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Kompetisi Bisnis Plan</li>
+                            <li>Best Entrepreneur Student</li>
+                            <li>Juara 3 Ekonomi Nasional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 4 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=DM" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Aisyah Nur Azizah</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Seni Musik</li>
+                            <li>Best Vocal Group</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 5 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=RW" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Khansarifda Almira Gusnia</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Olah Raga Renang</li>
+                            <li>Best Athlete Award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Arido Octafian Utomo</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 8 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="image.png" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Antasena S.A.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Debat Sosial</li>
+                            <li>Best Presenter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 9 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=MZ" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Keanu Rayyan I.Z.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Fisika Nasional</li>
+                            <li>Best Science Student</li>
+                            <li>Gold Medal International Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Alumni Card 10 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Caesar Narendra F.A.C.</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Alumni Card 11 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Azam Kasyafani</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Robotika Nasional</li>
+                            <li>Best Innovation Award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+                <!-- Alumni Card 12 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Dzaky Najmuddin Al-Aglano</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Adelia Bernesyha Dafina</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Khanaya Aisyah Arta</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Najwa Shofia Rahmah</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Kifah Cahyani Putri</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Indah Dewi Yulianah</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Hafiza Naura Putri</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Muthia Sashi Kirana</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Rasya Adinda Purna Wijaya</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Ezar Alleta JAnnah</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Erin Nadiyah Mahryndra</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Aka Wira Adiyaksa</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Farand Dzaky Wibowo</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Pancaraka Luqmansyah R.</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Asadullah Prasetya Rajaswa</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Nabila Fidelya</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 13 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=SA" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Ilham</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Tari Tradisional</li>
+                            <li>Best Cultural Ambassador</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Aurellia Devika P.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Gibran Sulistyanto</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Mutiara Salsabila Shopia</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Nabila Naswa Maulida</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Nayla Kayyasah Addinda P.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Shafira Qonita R.L.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Aiko El Humaira P.A.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Bervely Athaya Maxentya</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Child Lovely A.G.R.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Firda Oktavia K.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Janneta Elmira A.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>M.Abdan Syakuro Mumtaaz</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Dristadyumna Farand S.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Nadine Regita P.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVICENNA">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Naura Bilqis A.</h3>
+                    <p class="kelas">IX AVICENNA</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>
+                <div class="alumni-info">
+                    <h3>Tasya Fatta Kamila</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Alumni Card 6 -->
+            <div class="alumni-card" data-kelas="IX AVERUSY">
+                <div class="alumni-photo">
+                    <img src="https://via.placeholder.com/150x150/4a90d9/ffffff?text=AN" alt="Foto Alumni">
+                </div>  
+                <div class="alumni-info">
+                    <h3>Naykha</h3>
+                    <p class="kelas">IX AVERUSY</p>
+                    <div class="prestasi">
+                        <h4>Prestasi:</h4>
+                        <ul>
+                            <li>Juara 1 Lomba Melukis</li>
+                            <li>Best Creative Student</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kwanzama - Alumni SICH. Dibuat dengan 💙 untuk semuanya.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function filterAlumni() {
+            const kelas = document.getElementById('kelas').value;
+            const cards = document.querySelectorAll('.alumni-card');
+            
+            cards.forEach(card => {
+                if (kelas === 'all' || card.dataset.kelas === kelas) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Jadikan kartu bisa diklik ke halaman detail profil siswa
+        // Tetap mempertahankan struktur/penampilan kartu yang sudah ada.
+        (function attachCardLinks() {
+            const cards = document.querySelectorAll('.alumni-card');
+            cards.forEach(card => {
+                const namaEl = card.querySelector('h3');
+                const kelasEl = card.querySelector('p.kelas');
+                const imgEl = card.querySelector('img');
+                const prestasiLis = card.querySelectorAll('.prestasi ul li');
+
+                const nama = (namaEl && namaEl.textContent ? namaEl.textContent.trim() : '').replace(/\s+/g, ' ');
+                const kelas = (kelasEl && kelasEl.textContent ? kelasEl.textContent.trim() : '').replace(/\s+/g, ' ');
+                const img = (imgEl && imgEl.getAttribute('src') ? imgEl.getAttribute('src') : '');
+
+                const prestasi = Array.from(prestasiLis)
+                    .map(li => (li.textContent || '').trim())
+                    .filter(Boolean);
+
+                const prestasiParam = prestasi.join('|');
+
+                const url = new URL('siswa.html', window.location.href);
+                if (nama) url.searchParams.set('name', nama);
+                if (kelas) url.searchParams.set('kelas', kelas);
+                if (img) url.searchParams.set('img', img);
+                url.searchParams.set('prestasi', prestasiParam);
+
+                // overlay link full-area
+                const a = document.createElement('a');
+                a.className = 'alumni-card-link';
+                a.href = url.toString();
+                a.setAttribute('aria-label', `Lihat profil ${nama || 'siswa'}`);
+
+                card.style.position = card.style.position || 'relative';
+                card.style.cursor = 'pointer';
+                card.appendChild(a);
+            });
+        })();
+    </script>
+</body>
+</html>

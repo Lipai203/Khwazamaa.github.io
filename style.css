@@ -1,0 +1,840 @@
+/* ========================================
+   KWANZAMA - Alumni SICH 2023
+   Stylesheet untuk semua halaman
+   ======================================== */
+
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+/* background dasar putih di halaman siswa (cocok dengan header/footer) */
+body.siswa-page {
+    background-color: #ffffff;
+}
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+header {
+    background: linear-gradient(135deg, #C4A848 0%, #742a98 100%);
+    animation: animateGradient 5s linear infinite;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1e3c72;
+    color: white;
+}
+
+nav ul li a.active {
+    background-color: #1e3c72;
+    color: white;
+}
+
+/* ========================================
+   MAIN CONTENT STYLES
+   ======================================== */
+main {
+    padding: 40px 0;
+    min-height: calc(100vh - 300px);
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h2 {
+    color: #1e3c72;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   HERO SECTION (Index)
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   ABOUT SECTION (Index)
+   ======================================== */
+.about {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.about h3 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #1e3c72;
+}
+
+.feature-card h4 {
+    color: #1e3c72;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* ========================================
+   STATS SECTION (Index)
+   ======================================== */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   ALUMNI PROFILE STYLES (Profil)
+   ======================================== */
+.alumni-card {
+    position: relative;
+}
+
+/* ========================================
+   SISWA DETAIL STYLES
+   ======================================== */
+body.siswa-page,
+.siswa-profile {
+    background-color: #ffffff;
+}
+
+/* kartu detail siswa */
+.siswa-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* foto dibuat sedang (tidak terlalu besar) */
+.siswa-photo {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background: #f5f7fa;
+}
+
+.siswa-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* penjelasan/isi di tengah */
+.siswa-info {
+    text-align: center;
+}
+
+/* prestasi list style tetap ikut theme */
+.siswa-info .prestasi h4,
+.siswa-info h3 {
+    color: #1e3c72;
+}
+
+.siswa-info .prestasi ul {
+    list-style: none;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+.siswa-info .prestasi ul li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    color: #555;
+}
+
+.siswa-info .prestasi ul li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+}
+
+
+/* Overlay link agar kartu bisa diklik tanpa mengubah tampilan */
+.alumni-card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-decoration: none;
+    background: transparent;
+}
+
+.alumni-card:hover .alumni-card-link {
+    /* tetap transparan; hanya memastikan area klik */
+}
+
+.alumni-filter {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.alumni-filter label {
+    font-weight: 600;
+    color: #1e3c72;
+    margin-right: 10px;
+}
+
+.alumni-filter select {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #1e3c72;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.alumni-card {
+    background: linear-gradient(135deg, #C4A848 0%, #742a98 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.303);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+}
+
+.alumni-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.alumni-photo {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.alumni-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alumni-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.alumni-info h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.alumni-info .kelas {
+    color: #2a5298;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    background-color: #e8f0fe;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.alumni-info .prestasi h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.alumni-info .prestasi ul {
+    list-style: none;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.alumni-info .prestasi ul li {
+    padding: 3px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.alumni-info .prestasi ul li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+/* ========================================
+   GALLERY STYLES (Galeri)
+   ======================================== */
+.gallery-categories {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-btn {
+    padding: 12px 25px;
+    border: 2px solid #1e3c72;
+    background-color: white;
+    color: #1e3c72;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background-color: #1e3c72;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-caption {
+    padding: 20px;
+}
+
+.gallery-caption h4 {
+    color: #1e3c72;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.gallery-caption p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Video Gallery Styles */
+.gallery-item video,
+.gallery-item .video-thumbnail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gallery-item .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    background-color: #000;
+}
+
+.gallery-item .video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item .video-thumbnail:hover img {
+    opacity: 0.6;
+}
+
+.gallery-item .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(30, 60, 114, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gallery-item .video-thumbnail:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #1e3c72;
+}
+
+.play-button::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid white;
+    margin-left: 5px;
+}
+
+/* Video Modal Styles */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.video-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-modal-content video {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.video-modal-close:hover {
+    color: #C4A848;
+}
+
+.video-modal-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+/* ========================================
+   LOCATION STYLES (Lokasi)
+   ======================================== */
+.location-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.info-card h3 {
+    color: #1e3c72;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.info-card ul {
+    list-style: none;
+    color: #555;
+}
+
+.info-card ul li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+.map-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.map-placeholder {
+    text-align: center;
+    position: relative;
+}
+
+.map-pin {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.map-placeholder h3 {
+    color: #1e3c72;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.map-placeholder p {
+    color: #666;
+}
+
+.map-note {
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* ========================================
+   TESTIMONIALS STYLES (Lokasi)
+   ======================================== */
+.testimonials {
+    margin-top: 50px;
+}
+
+.testimonials h3 {
+    color: #1e3c72;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #1e3c72;
+}
+
+.testimonial-card p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+    color: #1e3c72;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+footer {
+    background: linear-gradient(135deg,  #C4A848 0%, #742a98 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .alumni-card {
+        flex-direction: column;
+    }
+    
+    .alumni-photo {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .alumni-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
